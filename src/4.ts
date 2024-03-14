@@ -28,7 +28,7 @@ abstract class House {
   }
   abstract openDoor(key: Key): void;
   comeIn(person: Person): void {
-    if (this.door && this.tenants.includes(person)) {
+    if (this.door && !this.tenants.includes(person)) {
       this.tenants.push(person);
     }
   }
